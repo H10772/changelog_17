@@ -1,6 +1,6 @@
 {
     'name': 'Softspace Changelog Sender',
-    'version': '17.0.2.0.0',
+    'version': '18.0.1.0.0',
     'category': 'Project',
     'summary': 'Send changelog entries from Softspace Main Odoo to client Odoo instances',
     'description': """
