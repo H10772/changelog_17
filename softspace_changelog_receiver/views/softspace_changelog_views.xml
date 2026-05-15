@@ -44,21 +44,21 @@
         <field name="name">softspace.changelog.tree</field>
         <field name="model">softspace.changelog</field>
         <field name="arch" type="xml">
-            <tree string="Changelogs" decoration-muted="not active">
+            <list string="Changelogs" decoration-muted="not active">
                 <field name="name"/>
                 <field name="version"/>
                 <field name="release_date"/>
                 <field name="source_project"/>
                 <field name="received_date"/>
                 <field name="active" widget="boolean_toggle"/>
-            </tree>
+            </list>
         </field>
     </record>
 
     <record id="action_softspace_changelog" model="ir.actions.act_window">
         <field name="name">Changelogs</field>
         <field name="res_model">softspace.changelog</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
     <menuitem id="menu_softspace_receiver_root" name="Softspace" sequence="100"/>

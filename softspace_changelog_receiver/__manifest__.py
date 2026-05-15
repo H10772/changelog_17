@@ -24,13 +24,13 @@
     'depends': ['website'],
     'data': [
         'security/ir.model.access.csv',
-        'data/cron_data.xml',
-        'views/res_config_settings_views.xml',
-        'views/changelog_api_log_views.xml',
         'views/softspace_changelog_views.xml',
+        'views/changelog_api_log_views.xml',
+        'views/res_config_settings_views.xml',
         'views/website_changelog_templates.xml',
     ],
     'installable': True,
     'application': True,
     'license': 'LGPL-3',
+    'post_init_hook': '_create_cron',
 }
