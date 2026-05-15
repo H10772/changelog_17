@@ -1,6 +1,6 @@
 {
     'name': 'Softspace Changelog Receiver',
-    'version': '17.0.2.0.0',
+    'version': '18.0.1.0.0',
     'category': 'Website',
     'summary': 'Receive and display changelog entries from Softspace on client Odoo website',
     'description': """
@@ -24,13 +24,13 @@
     'depends': ['website'],
     'data': [
         'security/ir.model.access.csv',
-        'data/cron_data.xml',
-        'views/res_config_settings_views.xml',
-        'views/changelog_api_log_views.xml',
         'views/softspace_changelog_views.xml',
+        'views/changelog_api_log_views.xml',
+        'views/res_config_settings_views.xml',
         'views/website_changelog_templates.xml',
     ],
     'installable': True,
     'application': True,
     'license': 'LGPL-3',
+    'post_init_hook': '_create_cron',
 }

@@ -5,7 +5,7 @@
         <field name="name">softspace.changelog.api.log.tree</field>
         <field name="model">softspace.changelog.api.log</field>
         <field name="arch" type="xml">
-            <tree string="API Logs" decoration-danger="status in ('auth_failed', 'error')"
+            <list string="API Logs" decoration-danger="status in ('auth_failed', 'error')"
                   decoration-warning="status == 'rate_limited'"
                   decoration-success="status == 'success'">
                 <field name="create_date" string="Time"/>
@@ -20,7 +20,7 @@
                 <field name="hmac_valid"/>
                 <field name="response_time_ms" string="Time (ms)"/>
                 <field name="error_message"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -56,7 +56,7 @@
     <record id="action_changelog_api_log" model="ir.actions.act_window">
         <field name="name">API Logs</field>
         <field name="res_model">softspace.changelog.api.log</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="context">{'search_default_today': 1}</field>
     </record>
 
